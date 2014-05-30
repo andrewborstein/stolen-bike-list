@@ -1,0 +1,10 @@
+# Site settings
+title: Bike Index. List of Stolen Bikes.
+email: your-email@domain.com
+description: "Test page for creating a list of all stolen bikes."
+baseurl: ""
+url: "http://github.com/andrewborstein"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
