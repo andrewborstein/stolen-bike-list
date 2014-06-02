@@ -2,7 +2,7 @@
 title: Bike Index - List of Stolen Bikes
 email: info@brownborgstudios.com
 description: "Test page for creating a list of all stolen bikes."
-baseurl: "stolen-bike-list"
+baseurl: "/stolen-bike-list"
 url: "http://github.com/andrewborstein"
 
 # Build settings
