@@ -27,7 +27,7 @@ body {
   font-size: 2em;
   line-height: 1.5; 
   background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
-  font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
 }

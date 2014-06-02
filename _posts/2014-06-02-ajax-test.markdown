@@ -38,7 +38,7 @@ style="height: 150px;width: 100%">
 
 <style type="text/css">
 body{
-    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 13px;       
 }
 form span{  
@@ -141,7 +141,7 @@ $(document).ready(function(e) {
 
 <style type="text/css">
 body{
-    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 13px;       
 }
 form span{  
