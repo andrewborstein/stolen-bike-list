@@ -1,0 +1,239 @@
+---
+layout: post
+title:  "AJAX Test"
+date:   2014-06-02 10:27:09
+categories: jekyll ajax
+---
+
+<hr>
+
+
+<h2>via iframe (<a href="http://jsfiddle.net/clickthelink/Uwcuz/">credit</a>)</h2>
+<h5>Output</h5>
+<iframe src="http://fiddle.jshell.net/clickthelink/Uwcuz/1/show/light/" kwframeid="1" style="height: 120px;width: 100%"></iframe>
+<h5>Code</h5>
+{% highlight html %}
+<iframe src="http://fiddle.jshell.net/clickthelink/Uwcuz/1/show/light/" 
+kwframeid="1" 
+style="height: 150px;width: 100%">
+</iframe>
+{% endhighlight %}
+
+<br>
+<hr>
+
+
+<h2>via HTML</h2>
+<h5>Output</h5>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>jQuery AJAX - jsFiddle demo by clickthelink</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js">
+  </script>
+  <link rel="stylesheet" type="text/css" 
+  href="http://fiddle.jshell.net/css/normalize.css">
+  <link rel="stylesheet" type="text/css" 
+  href="http://fiddle.jshell.net/css/result-light.css">
+
+<style type="text/css">
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 13px;       
+}
+form span{  
+    display: block;
+    margin: 10px;
+}
+label{
+    display: inline-block;
+    width: 100px;     
+}
+input[type="text"]{
+    border: 1px soild #ccc;
+    width: 200px;
+    padding: 5px;
+}
+input[type="submit"]{
+     padding: 5px 15px;       
+}
+span#result{
+    padding: 5px;
+    background: #ff9;        
+}
+img#loadingimg{
+    display: none;                   
+}
+</style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+
+$(document).ready(function(e) {
+    
+    $("form[ajax=true]").submit(function(e) {
+        
+        e.preventDefault();
+        
+        var form_data = $(this).serialize();
+        var form_url = $(this).attr("action");
+        var form_method = $(this).attr("method").toUpperCase();
+        
+        $("#loadingimg").show();
+        
+        $.ajax({
+            url: form_url, 
+            type: form_method,      
+            data: form_data,     
+            cache: false,
+            success: function(returnhtml){                          
+                $("#result").html(returnhtml); 
+                $("#loadingimg").hide();                    
+            }           
+        });    
+        
+    });
+    
+});
+//]]>  
+
+</script>
+
+</head>
+
+<body>
+
+  <form method="post" action="/echo/html/" ajax="true" style="border: 2px inset">
+    <span id="result">
+    	<a href="http://wp.me/p2O9K2-b">
+    	jQuery + AJAX form submit script.
+    	</a>
+    </span>
+    <span>        
+        <label>
+        Message: 
+        </label>
+        <input type="text" name="html" placeholder="Howdy...">
+    </span>
+    
+    <span>
+        <label>
+        <img id="loadingimg" src="http://dev.cloudcell.co.uk/bin/loading.gif">
+        </label>
+        <input type="submit" value="Submit">      
+    </span>
+</form>
+
+</body>
+<h5>Code</h5>
+{% highlight html %}
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>jQuery AJAX - jsFiddle demo by clickthelink</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js">
+  </script>
+  <link rel="stylesheet" type="text/css" 
+  href="http://fiddle.jshell.net/css/normalize.css">
+  <link rel="stylesheet" type="text/css" 
+  href="http://fiddle.jshell.net/css/result-light.css">
+
+<style type="text/css">
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 13px;       
+}
+form span{  
+    display: block;
+    margin: 10px;
+}
+label{
+    display: inline-block;
+    width: 100px;     
+}
+input[type="text"]{
+    border: 1px soild #ccc;
+    width: 200px;
+    padding: 5px;
+}
+input[type="submit"]{
+     padding: 5px 15px;       
+}
+span#result{
+    padding: 5px;
+    background: #ff9;        
+}
+img#loadingimg{
+    display: none;                   
+}
+</style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+
+$(document).ready(function(e) {
+    
+    $("form[ajax=true]").submit(function(e) {
+        
+        e.preventDefault();
+        
+        var form_data = $(this).serialize();
+        var form_url = $(this).attr("action");
+        var form_method = $(this).attr("method").toUpperCase();
+        
+        $("#loadingimg").show();
+        
+        $.ajax({
+            url: form_url, 
+            type: form_method,      
+            data: form_data,     
+            cache: false,
+            success: function(returnhtml){                          
+                $("#result").html(returnhtml); 
+                $("#loadingimg").hide();                    
+            }           
+        });    
+        
+    });
+    
+});
+//]]>  
+
+</script>
+
+</head>
+
+<body>
+
+  <form method="post" action="/echo/html/" ajax="true">
+    <span id="result">
+    	<a href="http://wp.me/p2O9K2-b">
+    	jQuery + AJAX form submit script.
+    	</a>
+    </span>
+    <span>        
+        <label>
+        Message: 
+        </label>
+        <input type="text" name="html" placeholder="Howdy...">
+    </span>
+    
+    <span>
+        <label>
+        <img id="loadingimg" src="http://dev.cloudcell.co.uk/bin/loading.gif">
+        </label>
+        <input type="submit" value="Submit">      
+    </span>
+</form>
+
+</body>
+{% endhighlight %}
+
+<br>
+<hr>
+
+
+[jekyll-gh]: https://github.com/jekyll/jekyll
+[jekyll]:    http://jekyllrb.com
