@@ -5,7 +5,7 @@ date:   2014-05-31 18:17:09
 categories: jekyll bikeindex
 ---
 
-<ul class="bike-list">
+<ul class="bike-list" id="bike-list">
 <li>
 <img src="http://placehold.it/800x450&text=super+cool+bike">
 <p><span>Cannondale</span> stolen on <span>XXXX</span></p>
