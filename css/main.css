@@ -320,6 +320,51 @@ a:visited { color: #205caa; }
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
 
+/* bike list styles */
+/* ----------------------------------------------------------*/
+
+ul.bike-list {
+    margin-left: 0;
+    padding-left: 0;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 100%
+}
+
+ul.bike-list li {
+    border-bottom: 1px dashed;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+
+}
+
+ul.bike-list li span {
+  color: #3a3a3a;
+  font-weight: 300;
+}
+
+ul.bike-list li:after {
+  content: 'Display photo if they have it';
+  width: 130px;
+  position: absolute;
+  top: 0px;
+  right: -150px;
+  display: block;
+  font-size: .5em;
+  font-style: italic;
+  color: rgb(153, 153, 153);
+}
+
+ul.bike-list li.no-img:after {
+  content: 'No photo';
+}
+
+ul.bike-list img {
+    max-width: 100%;
+
 /* media queries */
 /* ----------------------------------------------------------*/
 

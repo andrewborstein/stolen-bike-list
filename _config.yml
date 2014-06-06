@@ -1,5 +1,5 @@
 # Site settings
-title: Bike Index - List of Stolen Bikes
+title: Bike Index - Stolen Bike List
 email: info@brownborgstudios.com
 description: "Test page for creating a list of all stolen bikes."
 baseurl: "/stolen-bike-list"

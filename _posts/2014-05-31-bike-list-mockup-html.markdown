@@ -24,7 +24,7 @@ categories: jekyll bikeindex
 <style>
 
 body {
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.5; 
   background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
   font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, serif;
@@ -39,43 +39,7 @@ a:hover {
   color: #c5000c;
 }
 
-ul.bike-list {
-    margin-left: 0;
-    padding-left: 0;
-}
 
-ul.bike-list li {
-    border-bottom: 1px dashed;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-    position: relative;
-    list-style: none;
-    padding-left: 0;
-}
-
-ul.bike-list li span {
-  color: #3a3a3a;
-  font-weight: 300;
-}
-
-ul.bike-list li:after {
-  content: 'Display photo if they have it';
-  width: 130px;
-  position: absolute;
-  top: 0px;
-  right: -150px;
-  display: block;
-  font-size: .5em;
-  font-style: italic;
-  color: rgb(153, 153, 153);
-}
-
-ul.bike-list li.no-img:after {
-  content: 'No photo';
-}
-
-ul.bike-list img {
-    max-width: 100%;
 }
 
 </style>
