@@ -21,7 +21,7 @@ categories: jekyll ajax js list
  
 </div>
 
-<script src="http://0.0.0.0:4000/stolen-bike-list/js/jquery-2.1.1.min.js">
+<script src="/stolen-bike-list/js/jquery-2.1.1.min.js">
 </script>
 
 <script type="text/javascript">
