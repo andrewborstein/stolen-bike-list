@@ -2,7 +2,7 @@
 layout: post
 title:  "Stolen Bike List"
 date:   2014-06-02 10:27:09
-categories: jekyll ajax js list
+categories: ajax js
 ---
 
 <a href="#" class="jquery">jQuery Toggle Test</a>
