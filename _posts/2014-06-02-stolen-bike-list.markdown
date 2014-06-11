@@ -55,8 +55,7 @@ $(function(){
  
 </div>
 
-<script src="/stolen-bike-list/js/jquery-2.1.1.min.js">
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
