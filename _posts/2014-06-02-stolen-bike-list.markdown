@@ -108,19 +108,21 @@ $(function(){
 
 <script type="text/javascript">
 // script provided by seth
-$.ajax({
-  type: "GET",
-  url: "https://bikeindex.org/api/v1/bikes?stolen=true",
-  success: function(data, textStatus, jqXHR) {
-    $.each(data["bikes"], function(index, value) { 
-      list_item = '<img src=' + value["thumb"] + '>';
-      list_item += '<p><span>' value["manufacturer_name"] + '</span>';
-      list_item += ' stolen on ' value["stolen_record"]["date_stolen"];
-      // You should parse the date to make it more readable
-      $('#bike-list').append("<li>" +  list_item + "</li>");
-      console.log(index);
-    }); 
-  } 
+$(document).ready(function(){
+    $.ajax({
+        type: "GET",
+        url: "https://bikeindex.org/api/v1/bikes?stolen=true",
+        success: function(data, textStatus, jqXHR) {
+            $.each(data["bikes"], function(index, value) { 
+                list_item = '<img src=' + value["thumb"] + '>';
+                list_item += '<p><span>' value["manufacturer_name"] + '</span>';
+                list_item += ' stolen on ' value["stolen_record"]["date_stolen"];
+                // You should parse the date to make it more readable
+                $('#bike-list').append("<li>" +  list_item + "</li>");
+                console.log(index);
+            }); 
+        } 
+    });
 });
 </script>
 
