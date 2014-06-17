@@ -19,12 +19,33 @@ $(document).ready(function(){
 {% endhighlight html %}
 <div class="excontainer">
 
+<h4>AJAX Code provided by Seth</h4>
+{% highlight js %}
+// script provided by seth
+$(document).ready(function(){
+    $.ajax({
+        type: "GET",
+        url: "https://bikeindex.org/api/v1/bikes?stolen=true",
+        success: function(data, textStatus, jqXHR) {
+            $.each(data["bikes"], function(index, value) { 
+                list_item = '<img src=' + value["thumb"] + '>';
+                list_item += '<p><span>' value["manufacturer_name"] + '</span>';
+                list_item += ' stolen on ' value["stolen_record"]["date_stolen"];
+                // You should parse the date to make it more readable
+                $('#bike-list').append("<li>" +  list_item + "</li>");
+                console.log(index);
+            }); 
+        } 
+    });
+});
+{% endhighlight html %}
+
 <h4>Display (via AJAX) results from <a href="https://bikeindex.org/api/v1/bikes?stolen=true" target="_blank">https://bikeindex.org/api/v1/bikes?stolen=true</a></h4>
 <button id="loadbasic" style="
     padding: 8px;
     font-size: 12px;
 ">Submit</button>
-<br><br>
+</div>
 
 {% highlight js %}
 // learn jquery ajax
@@ -51,8 +72,6 @@ $(function(){
 
 <div id="result" style="padding-top:20px;">
     
-</div>
- 
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -126,6 +145,21 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $.ajax({
+        type: "GET",
+        url: "https://bikeindex.org/api/v1/bikes?stolen=true",
+        success: function(data, textStatus, jqXHR) {
+            $.each(data["bikes"], function(index, value) { 
+            $('body').append($('<div>', {
+                text: value.name
+            }));
+        });
+    }
+});
+});
+</script>
 
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll]:    http://jekyllrb.com
